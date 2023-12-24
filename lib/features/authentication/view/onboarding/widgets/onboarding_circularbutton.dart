@@ -5,8 +5,8 @@ import 'package:tstore/features/authentication/controller/onboarding/onboarding_
 import 'package:tstore/utils/constants/colors.dart';
 import 'package:tstore/utils/helpers/helper_functions.dart';
 
-import '../../../../utils/constants/sizes.dart';
-import '../../../../utils/device/device_utility.dart';
+import '../../../../../utils/constants/sizes.dart';
+import '../../../../../utils/device/device_utility.dart';
 
 class OnBoardingCircularButton extends StatelessWidget {
   const OnBoardingCircularButton({

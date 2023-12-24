@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
+import 'package:tstore/features/authentication/view/login/login.dart';
 
 class onBoardingController extends GetxController {
   static onBoardingController get instance => Get.find();
@@ -20,7 +21,7 @@ class onBoardingController extends GetxController {
 //:ToDo Update current index & jump to next page
   void nextPage() {
     if (currentPageIndex.value == 2) {
-      //login Page
+      Get.offAll(()=>const LoginScreen());
     } else {
       pagecontroller.jumpToPage(currentPageIndex.value + 1);
     }

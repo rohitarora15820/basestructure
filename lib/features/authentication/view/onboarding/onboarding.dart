@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import 'package:tstore/features/authentication/view/widgets/onboarding_circularbutton.dart';
-import 'package:tstore/features/authentication/view/widgets/onboarding_dotnavigation.dart';
-import 'package:tstore/features/authentication/view/widgets/onboarding_page.dart';
-import 'package:tstore/features/authentication/view/widgets/onboarding_skip.dart';
+import 'package:tstore/features/authentication/view/onboarding/widgets/onboarding_circularbutton.dart';
+import 'package:tstore/features/authentication/view/onboarding/widgets/onboarding_dotnavigation.dart';
+import 'package:tstore/features/authentication/view/onboarding/widgets/onboarding_page.dart';
+import 'package:tstore/features/authentication/view/onboarding/widgets/onboarding_skip.dart';
 import 'package:tstore/utils/constants/colors.dart';
 import 'package:tstore/utils/constants/image_strings.dart';
 import 'package:tstore/utils/constants/sizes.dart';
@@ -13,7 +13,7 @@ import 'package:tstore/utils/constants/text_strings.dart';
 import 'package:tstore/utils/device/device_utility.dart';
 import 'package:tstore/utils/helpers/helper_functions.dart';
 
-import '../controller/onboarding/onboarding_controller.dart';
+import '../../controller/onboarding/onboarding_controller.dart';
 
 class OnBoardingScreen extends StatelessWidget {
   const OnBoardingScreen({super.key});
@@ -61,3 +61,5 @@ class OnBoardingScreen extends StatelessWidget {
     );
   }
 }
+
+
