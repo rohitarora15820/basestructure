@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:tstore/common/widgets/custom_shapes/containers/circular_container.dart';
+import 'package:tstore/common/widgets/products/products_cards/product_card_vertical.dart';
 import 'package:tstore/features/shop/view/widgets/home_appbar.dart';
 import 'package:tstore/features/shop/view/widgets/home_categories.dart';
 import 'package:tstore/features/shop/view/widgets/promo_slider.dart';
@@ -19,12 +20,12 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
             /// Header
-            const TPrimaryHeaderContainer(
+            TPrimaryHeaderContainer(
               child: Column(
                 children: [
                   //Appbar
@@ -43,16 +44,16 @@ class HomeScreen extends StatelessWidget {
 
                   //Categories
                   Padding(
-                    padding: const EdgeInsets.only(left: TSizes.defaultSpace),
+                    padding: EdgeInsets.only(left: TSizes.defaultSpace),
                     child: Column(
                       children: [
                         //Heading Section
-                        const TSectionHeading(
+                        TSectionHeading(
                           title: "Product Categories",
                           showActionButton: false,
                           textColor: TColors.white,
                         ),
-                        const SizedBox(
+                        SizedBox(
                           height: TSizes.spaceBtwItems,
                         ),
 
@@ -67,14 +68,22 @@ class HomeScreen extends StatelessWidget {
 
             /// Body section
             Padding(
-                padding: const EdgeInsets.all(TSizes.defaultSpace),
-                child: TPromoSlider(
-                  banners: [
-                    TImages.promoBanner1,
-                    TImages.promoBanner2,
-                    TImages.promoBanner3,
+                padding: EdgeInsets.all(TSizes.defaultSpace),
+                child: Column(
+                  children: [
+                    TPromoSlider(
+                      banners: [
+                        TImages.promoBanner1,
+                        TImages.promoBanner2,
+                        TImages.promoBanner3,
+                      ],
+                    ),
+                    SizedBox(
+                      height: TSizes.spaceBtwSections,
+                    ),
+                    TProductCardVertical()
                   ],
-                ))
+                )),
           ],
         ),
       ),
