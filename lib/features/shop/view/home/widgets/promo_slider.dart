@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tstore/features/shop/controller/hom_controller.dart';
 
-import '../../../../common/widgets/custom_shapes/containers/circular_container.dart';
-import '../../../../common/widgets/images/t_roundec_images.dart';
-import '../../../../utils/constants/image_strings.dart';
-import '../../../../utils/constants/sizes.dart';
+import '../../../../../common/widgets/custom_shapes/containers/circular_container.dart';
+import '../../../../../common/widgets/images/t_roundec_images.dart';
+import '../../../../../utils/constants/image_strings.dart';
+import '../../../../../utils/constants/sizes.dart';
 
 class TPromoSlider extends StatelessWidget {
   const TPromoSlider({

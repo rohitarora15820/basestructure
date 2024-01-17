@@ -11,7 +11,7 @@ class TCartCounterIcon extends StatelessWidget {
     this.iconColor,
   });
 
-  final VoidCallback? onPressed;
+  final Function()? onPressed;
   final Color? iconColor;
 
   @override
@@ -35,10 +35,11 @@ class TCartCounterIcon extends StatelessWidget {
               child: Center(
                 child: Text(
                   '2',
-                  style: Theme.of(context)
-                      .textTheme
-                      .labelLarge!
-                      .apply(color: TColors.white, fontSizeFactor: 0.0),
+                  style: TextStyle(color: Colors.white,fontSize: 10),
+                  // style: Theme.of(context)
+                  //     .textTheme
+                  //     .labelLarge!
+                  //     .apply(color:Colors.white, fontSizeFactor: 0.0),
                 ),
               ),
             ))

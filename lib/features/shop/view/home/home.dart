@@ -2,25 +2,27 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:tstore/common/widgets/custom_shapes/containers/circular_container.dart';
 import 'package:tstore/common/widgets/products/products_cards/product_card_vertical.dart';
-import 'package:tstore/features/shop/view/widgets/home_appbar.dart';
-import 'package:tstore/features/shop/view/widgets/home_categories.dart';
-import 'package:tstore/features/shop/view/widgets/promo_slider.dart';
+import 'package:tstore/features/shop/view/home/widgets/home_appbar.dart';
+import 'package:tstore/features/shop/view/home/widgets/home_categories.dart';
+// import 'package:tstore/features/shop/view/widgets/home_categories.dart';
+import 'package:tstore/features/shop/view/home/widgets/promo_slider.dart';
 import 'package:tstore/utils/constants/sizes.dart';
 import 'package:tstore/utils/helpers/helper_functions.dart';
-import '../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
-import '../../../common/widgets/custom_shapes/containers/search_container.dart';
-import '../../../common/widgets/image_text_widget/vertical_image_text.dart';
-import '../../../common/widgets/images/t_roundec_images.dart';
-import '../../../common/widgets/text/section_heading.dart';
-import '../../../utils/constants/colors.dart';
-import '../../../utils/constants/image_strings.dart';
+import '../../../../common/layout/t_grid_layout.dart';
+import '../../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
+import '../../../../common/widgets/custom_shapes/containers/search_container.dart';
+import '../../../../common/widgets/image_text_widget/vertical_image_text.dart';
+import '../../../../common/widgets/images/t_roundec_images.dart';
+import '../../../../common/widgets/text/section_heading.dart';
+import '../../../../utils/constants/colors.dart';
+import '../../../../utils/constants/image_strings.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -81,7 +83,20 @@ class HomeScreen extends StatelessWidget {
                     SizedBox(
                       height: TSizes.spaceBtwSections,
                     ),
-                    TProductCardVertical()
+                    //Heading Section
+                    TSectionHeading(
+                      title: "Popular Products",
+                      onPressed: (){},
+
+                    ),
+                    SizedBox(
+                      height: TSizes.spaceBtwItems,
+                    ),
+                    TGridLayout(
+                      itemCount: 2,
+                      itemBuilder: (p0, p1) =>const TProductCardVertical(),
+                    ),
+
                   ],
                 )),
           ],
@@ -90,3 +105,4 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
