@@ -148,7 +148,7 @@ class SignUpForm extends StatelessWidget {
                 Get.to(()=> const VerifyEmailScreen());
               },
 
-              child: Text(TTexts.createAccount),
+              child: const Text(TTexts.createAccount),
             ),)
         ],
       ),

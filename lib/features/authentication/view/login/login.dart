@@ -1,15 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:tstore/common/styles/spacing_styles.dart';
 import 'package:tstore/features/authentication/view/login/widgets/login_divider.dart';
 import 'package:tstore/features/authentication/view/login/widgets/login_footer.dart';
 import 'package:tstore/features/authentication/view/login/widgets/login_form.dart';
 import 'package:tstore/features/authentication/view/login/widgets/login_header.dart';
-import 'package:tstore/utils/constants/colors.dart';
-import 'package:tstore/utils/constants/image_strings.dart';
 import 'package:tstore/utils/constants/sizes.dart';
-import 'package:tstore/utils/constants/text_strings.dart';
 import 'package:tstore/utils/helpers/helper_functions.dart';
 
 class LoginScreen extends StatelessWidget {

@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:tstore/common/widgets/login_signup/form_divider.dart';
 import 'package:tstore/common/widgets/login_signup/social_buttons.dart';
 import 'package:tstore/features/authentication/view/signup/widgets/signup_form.dart';
-import 'package:tstore/utils/constants/colors.dart';
 import 'package:tstore/utils/constants/sizes.dart';
 import 'package:tstore/utils/constants/text_strings.dart';
 import 'package:tstore/utils/helpers/helper_functions.dart';
@@ -49,7 +47,7 @@ class SignUp extends StatelessWidget {
 
 
               ///Social Buttons
-              TSocialButtons()
+              const TSocialButtons()
             ],
           ),
         ),

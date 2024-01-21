@@ -4,7 +4,6 @@ import 'package:tstore/common/styles/shadows.dart';
 import 'package:tstore/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:tstore/common/widgets/images/t_roundec_images.dart';
 import 'package:tstore/utils/constants/colors.dart';
-import 'package:tstore/utils/constants/enums.dart';
 import 'package:tstore/utils/constants/image_strings.dart';
 import 'package:tstore/utils/constants/sizes.dart';
 import 'package:tstore/utils/helpers/helper_functions.dart';
@@ -39,7 +38,7 @@ class TProductCardVertical extends StatelessWidget {
               child: Stack(
                 children: [
                   ///Thumbnail Image
-                  TRoundedImage(
+                  const TRoundedImage(
                     imageUrl: TImages.productImage1,
                     applyImageRadius: true,
                   ),
@@ -75,43 +74,43 @@ class TProductCardVertical extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: TSizes.spaceBtwItems/2,),
+            const SizedBox(height: TSizes.spaceBtwItems/2,),
             //
             ///Detail Section
 
             Padding(
-              padding: EdgeInsets.only(left: TSizes.sm),
+              padding: const EdgeInsets.only(left: TSizes.sm),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  TProductTileText(
+                  const TProductTileText(
                     title: 'Grren Nike Air Shoes',
                     smallSize: true,
                   ),
 
-                  SizedBox(height: TSizes.spaceBtwItems/2,),
+                  const SizedBox(height: TSizes.spaceBtwItems/2,),
 
-                  TBrandTitleText(title: 'Nike'),
+                  const TBrandTitleText(title: 'Nike'),
 
 
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       /// Price
-                      TProductPriceText(
+                      const TProductPriceText(
                         price: '35.5',
                       ),
 
                       ///Add To Cart Button
                       Container(
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: TColors.dark,
                           borderRadius: BorderRadius.only(
                             topLeft: Radius.circular(TSizes.cardRadiusMd),
                             bottomRight: Radius.circular(TSizes.productImageRadius),
                           )
                         ),
-                        child: SizedBox(
+                        child: const SizedBox(
                             width: TSizes.iconLg * 1.2,
                             height: TSizes.iconLg * 1.2,
                             child: Center(child: Icon(Iconsax.add,color: TColors.white,))),

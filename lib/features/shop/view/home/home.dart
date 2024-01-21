@@ -1,18 +1,13 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:tstore/common/widgets/custom_shapes/containers/circular_container.dart';
 import 'package:tstore/common/widgets/products/products_cards/product_card_vertical.dart';
 import 'package:tstore/features/shop/view/home/widgets/home_appbar.dart';
 import 'package:tstore/features/shop/view/home/widgets/home_categories.dart';
 // import 'package:tstore/features/shop/view/widgets/home_categories.dart';
 import 'package:tstore/features/shop/view/home/widgets/promo_slider.dart';
 import 'package:tstore/utils/constants/sizes.dart';
-import 'package:tstore/utils/helpers/helper_functions.dart';
 import '../../../../common/layout/t_grid_layout.dart';
 import '../../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
 import '../../../../common/widgets/custom_shapes/containers/search_container.dart';
-import '../../../../common/widgets/image_text_widget/vertical_image_text.dart';
-import '../../../../common/widgets/images/t_roundec_images.dart';
 import '../../../../common/widgets/text/section_heading.dart';
 import '../../../../utils/constants/colors.dart';
 import '../../../../utils/constants/image_strings.dart';
@@ -27,7 +22,7 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           children: [
             /// Header
-            TPrimaryHeaderContainer(
+            const TPrimaryHeaderContainer(
               child: Column(
                 children: [
                   //Appbar
@@ -63,24 +58,25 @@ class HomeScreen extends StatelessWidget {
                         THomeCategories()
                       ],
                     ),
-                  )
+                  ),
+                  SizedBox(height: TSizes.spaceBtwSections,)
                 ],
               ),
             ),
 
             /// Body section
             Padding(
-                padding: EdgeInsets.all(TSizes.defaultSpace),
+                padding: const EdgeInsets.all(TSizes.defaultSpace),
                 child: Column(
                   children: [
-                    TPromoSlider(
+                    const TPromoSlider(
                       banners: [
                         TImages.promoBanner1,
                         TImages.promoBanner2,
                         TImages.promoBanner3,
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: TSizes.spaceBtwSections,
                     ),
                     //Heading Section
@@ -89,7 +85,7 @@ class HomeScreen extends StatelessWidget {
                       onPressed: (){},
 
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: TSizes.spaceBtwItems,
                     ),
                     TGridLayout(

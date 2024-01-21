@@ -1,22 +1,22 @@
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:tstore/features/personalization/view/setting/setting.dart';
 import 'package:tstore/features/shop/view/shop/shop.dart';
 
 import 'package:tstore/utils/constants/colors.dart';
 import 'package:tstore/utils/helpers/helper_functions.dart';
 
 import 'features/shop/view/home/home.dart';
+import 'features/shop/view/wishlist/wishlist.dart';
 
 class NavigationMenu extends StatelessWidget {
- const NavigationMenu({super.key});
-
+  const NavigationMenu({super.key});
 
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(NavigationController());
-    final dark=THelperFunctions.isDarkMode(context);
+    final dark = THelperFunctions.isDarkMode(context);
     return Scaffold(
       bottomNavigationBar: Obx(
         () => NavigationBar(
@@ -25,8 +25,10 @@ class NavigationMenu extends StatelessWidget {
           selectedIndex: controller.selectedIndex.value,
           onDestinationSelected: (index) =>
               controller.selectedIndex.value = index,
-          backgroundColor: dark?TColors.black:TColors.white,
-          indicatorColor: dark?TColors.white.withOpacity(0.1):TColors.black.withOpacity(0.1),
+          backgroundColor: dark ? TColors.black : TColors.white,
+          indicatorColor: dark
+              ? TColors.white.withOpacity(0.1)
+              : TColors.black.withOpacity(0.1),
           destinations: const [
             NavigationDestination(icon: Icon(Iconsax.home), label: 'Home'),
             NavigationDestination(icon: Icon(Iconsax.shop), label: 'Shop'),
@@ -43,9 +45,9 @@ class NavigationMenu extends StatelessWidget {
 class NavigationController extends GetxController {
   final Rx<int> selectedIndex = 0.obs;
   final screens = [
-    HomeScreen(),
-    Shop(),
-    Container(color: Colors.orange),
-    Container(color: Colors.red),
+    const HomeScreen(),
+    const Shop(),
+    const FavouriteScreen(),
+    const SettingPage()
   ];
 }

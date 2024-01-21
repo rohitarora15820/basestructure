@@ -32,7 +32,7 @@ class TCartCounterIcon extends StatelessWidget {
               decoration: BoxDecoration(
                   color: TColors.black,
                   borderRadius: BorderRadius.circular(100)),
-              child: Center(
+              child: const Center(
                 child: Text(
                   '2',
                   style: TextStyle(color: Colors.white,fontSize: 10),
