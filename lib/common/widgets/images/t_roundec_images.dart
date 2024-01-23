@@ -15,6 +15,7 @@ class TRoundedImage extends StatelessWidget {
     this.isNetworkImage = false,
     this.onPressed,
     this.borderRadius = TSizes.md,
+    this.padding=EdgeInsets.zero,
   });
 
   final double? width, height;
@@ -27,6 +28,7 @@ class TRoundedImage extends StatelessWidget {
   final bool isNetworkImage;
   final VoidCallback? onPressed;
   final double borderRadius;
+  final EdgeInsetsGeometry padding;
 
   @override
   Widget build(BuildContext context) {
@@ -35,6 +37,7 @@ class TRoundedImage extends StatelessWidget {
       child: Container(
         width: width,
         height: height,
+        padding: padding,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(borderRadius),
             color: bgColor,
