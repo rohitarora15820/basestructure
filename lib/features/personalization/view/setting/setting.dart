@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 import 'package:tstore/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:tstore/common/widgets/list_tiles/settings_menu_tile.dart';
 import 'package:tstore/common/widgets/text/section_heading.dart';
+import 'package:tstore/features/personalization/view/address/add_new_address.dart';
+import 'package:tstore/features/personalization/view/address/address.dart';
+import 'package:tstore/features/shop/view/cart/cart.dart';
 import 'package:tstore/utils/constants/colors.dart';
 
 import 'package:tstore/utils/constants/sizes.dart';
@@ -60,13 +64,17 @@ class SettingPage extends StatelessWidget {
                     icon: Iconsax.safe_home,
                     title: "My Address",
                     subtitle: "Set shopping delivery address",
-                    onTap: () {},
+                    onTap: () {
+                      Get.to(()=>const UserAddressScreen());
+                    },
                   ),
                   TSettingsMenuTile(
                     icon: Iconsax.shopping_cart,
                     title: "My Cart",
                     subtitle: "Add, remove products and move to checkout",
-                    onTap: () {},
+                    onTap: () {
+                      Get.to(()=> const CartPage());
+                    },
                   ),
                   TSettingsMenuTile(
                     icon: Iconsax.bag_tick,
