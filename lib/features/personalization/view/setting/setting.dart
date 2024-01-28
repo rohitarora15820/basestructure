@@ -8,6 +8,7 @@ import 'package:tstore/common/widgets/text/section_heading.dart';
 import 'package:tstore/features/personalization/view/address/add_new_address.dart';
 import 'package:tstore/features/personalization/view/address/address.dart';
 import 'package:tstore/features/shop/view/cart/cart.dart';
+import 'package:tstore/features/shop/view/order/order.dart';
 import 'package:tstore/utils/constants/colors.dart';
 
 import 'package:tstore/utils/constants/sizes.dart';
@@ -80,7 +81,9 @@ class SettingPage extends StatelessWidget {
                     icon: Iconsax.bag_tick,
                     title: "My Orders",
                     subtitle: "In-progress and Completed Orders",
-                    onTap: () {},
+                    onTap: () {
+                      Get.to(()=> const OrderScreen());
+                    },
                   ),
                   TSettingsMenuTile(
                     icon: Iconsax.bank,
