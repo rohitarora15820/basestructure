@@ -13,7 +13,7 @@ class TOrderListScreen extends StatelessWidget {
     return ListView.separated(
       itemCount: 2,
       shrinkWrap: true,
-      separatorBuilder: (context, index) => SizedBox(
+      separatorBuilder: (context, index) =>const SizedBox(
         height: TSizes.spaceBtwItems,
       ),
       itemBuilder: (context, index) => TRoundedContainer(

@@ -42,9 +42,11 @@ class TProductCardVertical extends StatelessWidget {
               child: Stack(
                 children: [
                   ///Thumbnail Image
-                  const TRoundedImage(
-                    imageUrl: TImages.productImage1,
-                    applyImageRadius: true,
+                  Center(
+                    child: const TRoundedImage(
+                      imageUrl: TImages.productImage1,
+                      applyImageRadius: true,
+                    ),
                   ),
 
                   /// Sales Tag
@@ -78,52 +80,60 @@ class TProductCardVertical extends StatelessWidget {
                 ],
               ),
             ),
-            const SizedBox(height: TSizes.spaceBtwItems/2,),
-            //
+            SizedBox(
+              height: TSizes.spaceBtwItems/2,
+            ),
+
+
+
             ///Detail Section
 
-            Padding(
-              padding: const EdgeInsets.only(left: TSizes.sm),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const TProductTileText(
-                    title: 'Grren Nike Air Shoes',
-                    smallSize: true,
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const TProductTileText(
+                  title: 'Grren Nike Air Shoes',
+                  smallSize: true,
+                ),
+
+                const SizedBox(height: TSizes.spaceBtwItems/2,),
+
+                const TBrandTitleText(title: 'Nike'),
+
+
+
+              ],
+            ),
+            Spacer(),
+
+            /// Price Row
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                /// Price
+                Padding(
+                  padding: const EdgeInsets.only(left:TSizes.sm),
+                  child: const TProductPriceText(
+                    price: '35.5',
                   ),
+                ),
 
-                  const SizedBox(height: TSizes.spaceBtwItems/2,),
-
-                  const TBrandTitleText(title: 'Nike'),
-
-
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      /// Price
-                      const TProductPriceText(
-                        price: '35.5',
-                      ),
-
-                      ///Add To Cart Button
-                      Container(
-                        decoration: const BoxDecoration(
-                          color: TColors.dark,
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(TSizes.cardRadiusMd),
-                            bottomRight: Radius.circular(TSizes.productImageRadius),
-                          )
-                        ),
-                        child: const SizedBox(
-                            width: TSizes.iconLg * 1.2,
-                            height: TSizes.iconLg * 1.2,
-                            child: Center(child: Icon(Iconsax.add,color: TColors.white,))),
+                ///Add To Cart Button
+                Container(
+                  decoration: const BoxDecoration(
+                      color: TColors.dark,
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(TSizes.cardRadiusMd),
+                        bottomRight: Radius.circular(TSizes.productImageRadius),
                       )
+                  ),
+                  child: const SizedBox(
+                      width: TSizes.iconLg * 1.2,
+                      height: TSizes.iconLg * 1.2,
+                      child: Center(child: Icon(Iconsax.add,color: TColors.white,))),
+                )
 
-                    ],
-                  )
-                ],
-              ),
+              ],
             )
           ],
         ),
