@@ -27,7 +27,7 @@ class TSingleAddress extends StatelessWidget {
           : dark
               ? TColors.darkerGrey
               : TColors.grey,
-      margin: EdgeInsets.only(bottom: TSizes.spaceBtwItems),
+      margin: const EdgeInsets.only(bottom: TSizes.spaceBtwItems),
       child: Stack(
         children: [
           Positioned(
@@ -49,7 +49,7 @@ class TSingleAddress extends StatelessWidget {
                 style: Theme.of(context).textTheme.titleLarge,
               ),
               const SizedBox(height: TSizes.sm /2,),
-              Text('+91-8295883688',
+              const Text('+91-8295883688',
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
 

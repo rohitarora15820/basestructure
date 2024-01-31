@@ -10,7 +10,7 @@ class BrandProducts extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       appBar: TAppBar(
         title: Text(
           'Nike',

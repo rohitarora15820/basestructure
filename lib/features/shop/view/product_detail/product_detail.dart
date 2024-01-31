@@ -2,11 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:readmore/readmore.dart';
-import 'package:tstore/common/widgets/custom_appbar/appbar.dart';
-import 'package:tstore/common/widgets/custom_shapes/containers/curved_edges/curved_edges_widget.dart';
-import 'package:tstore/common/widgets/icons/t_circular_icon.dart';
-import 'package:tstore/common/widgets/images/t_roundec_images.dart';
-import 'package:tstore/common/widgets/products/cart/cart_menu_icon.dart';
 import 'package:tstore/common/widgets/text/section_heading.dart';
 import 'package:tstore/features/shop/view/product_detail/widget/bottom_add_to_cart.dart';
 import 'package:tstore/features/shop/view/product_detail/widget/product_attributes.dart';
@@ -14,11 +9,7 @@ import 'package:tstore/features/shop/view/product_detail/widget/product_meta_dat
 import 'package:tstore/features/shop/view/product_detail/widget/rating_share_widget.dart';
 import 'package:tstore/features/shop/view/product_detail/widget/tproducImageSlider.dart';
 import 'package:tstore/features/shop/view/product_review/product_review.dart';
-import 'package:tstore/utils/constants/colors.dart';
-import 'package:tstore/utils/helpers/helper_functions.dart';
-import 'package:tstore/utils/theme/widget_themes/bottom_sheet_theme.dart';
 
-import '../../../../utils/constants/image_strings.dart';
 import '../../../../utils/constants/sizes.dart';
 
 class ProductDetail extends StatelessWidget {
@@ -32,11 +23,11 @@ class ProductDetail extends StatelessWidget {
         child: Column(
           children: [
             /// Product Image Slider
-            TProductImageSlider(),
+            const TProductImageSlider(),
 
             /// Product Details
             Padding(
-              padding: EdgeInsets.only(
+              padding: const EdgeInsets.only(
                 left: TSizes.defaultSpace,
                 right: TSizes.defaultSpace,
                 bottom: TSizes.defaultSpace,
@@ -51,7 +42,7 @@ class ProductDetail extends StatelessWidget {
 
                   /// Attributes
                   const ProductAttributes(),
-                  SizedBox(
+                  const SizedBox(
                     height: TSizes.spaceBtwSections,
                   ),
 
@@ -65,14 +56,14 @@ class ProductDetail extends StatelessWidget {
                   ),
 
                   /// Description
-                  TSectionHeading(
+                  const TSectionHeading(
                     title: 'Description',
                     showActionButton: false,
                   ),
                   const SizedBox(
                     height: TSizes.spaceBtwItems,
                   ),
-                  ReadMoreText(
+                  const ReadMoreText(
                     'This is a comment on the section headings and the description of the section headings and the description of the section headings and the description of the section headings and the description of the section headings and the description of the section headings and the description of the section headings and the description of the section headings and the description of the section headings and the description of the section headings and the description of the section headings and the description of the section',
                     trimLines: 2,
                     trimMode: TrimMode.Line,
@@ -85,7 +76,7 @@ class ProductDetail extends StatelessWidget {
                   ),
 
                   /// Reviews
-                  Divider(),
+                  const Divider(),
 
                   const SizedBox(
                     height: TSizes.spaceBtwItems,

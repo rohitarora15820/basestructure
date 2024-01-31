@@ -49,7 +49,7 @@ class ProfileScreen extends StatelessWidget {
               ),
 
               const Divider(),
-              SizedBox(
+              const SizedBox(
                 height: TSizes.spaceBtwSections,
               ),
 
@@ -110,13 +110,13 @@ class ProfileScreen extends StatelessWidget {
                 value: "08 Oct, 1996",
 
               ),
-              Divider(),
-              SizedBox(
+              const Divider(),
+              const SizedBox(
                 height: TSizes.spaceBtwItems,
               ),
               Center(
                 child: TextButton(
-                  child: Text("Close Account",style: TextStyle(color: Colors.red),),
+                  child: const Text("Close Account",style: TextStyle(color: Colors.red),),
                   onPressed: (){},
                 ),
               )

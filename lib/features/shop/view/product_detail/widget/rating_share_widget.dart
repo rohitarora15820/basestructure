@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
@@ -17,17 +16,17 @@ class TRatingAndShare extends StatelessWidget {
         ///Ratings
         Row(
           children: [
-            Icon(Iconsax.star5,
+            const Icon(Iconsax.star5,
               color: Colors.amber,
             ),
-            SizedBox(
+            const SizedBox(
               width: TSizes.spaceBtwItems/2,
             ),
             Text.rich(
                 TextSpan(
                     children: [
                       TextSpan(text: '5.0',style: Theme.of(context).textTheme.bodyLarge),
-                      TextSpan(text: '(199)'),
+                      const TextSpan(text: '(199)'),
                     ]
                 )
             )
@@ -35,7 +34,7 @@ class TRatingAndShare extends StatelessWidget {
         ),
 
         ///Share
-        IconButton(onPressed: (){}, icon: Icon(Icons.share,size: TSizes.iconMd,))
+        IconButton(onPressed: (){}, icon: const Icon(Icons.share,size: TSizes.iconMd,))
       ],
     );
   }

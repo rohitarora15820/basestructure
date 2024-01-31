@@ -37,7 +37,7 @@ class TUserProfileTile extends StatelessWidget {
       ),
       trailing:
       IconButton(onPressed: () {
-        Get.to(()=> ProfileScreen());
+        Get.to(()=> const ProfileScreen());
       }, icon: const Icon(Iconsax.edit,color: TColors.white,)),
     );
   }

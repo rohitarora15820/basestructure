@@ -16,7 +16,7 @@ class OrderScreen extends StatelessWidget {
         ),
         showBackArrow: true,
       ),
-      body: Padding(
+      body: const Padding(
         padding: EdgeInsets.all(TSizes.defaultSpace),
         child: TOrderListScreen(),
       ),

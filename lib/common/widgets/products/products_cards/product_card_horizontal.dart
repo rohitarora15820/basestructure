@@ -9,7 +9,6 @@ import 'package:tstore/utils/constants/image_strings.dart';
 
 import '../../../../utils/constants/sizes.dart';
 import '../../../../utils/helpers/helper_functions.dart';
-import '../../../styles/shadows.dart';
 import '../../custom_shapes/containers/rounded_container.dart';
 import '../../icons/t_circular_icon.dart';
 
@@ -36,7 +35,7 @@ class TProductCardHorizontal extends StatelessWidget {
             child: Stack(
               children: [
                 /// Thumbnail Image
-                SizedBox(
+                const SizedBox(
                     width: 120,
                     height: 120,
                     child: TRoundedImage(
@@ -80,10 +79,10 @@ class TProductCardHorizontal extends StatelessWidget {
            SizedBox(
             width: 172,
             child: Padding(
-              padding: EdgeInsets.only(top: TSizes.sm, left: TSizes.sm),
+              padding: const EdgeInsets.only(top: TSizes.sm, left: TSizes.sm),
               child: Column(
                 children: [
-                  Column(
+                  const Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       TProductTileText(
@@ -97,13 +96,13 @@ class TProductCardHorizontal extends StatelessWidget {
                     ],
                   ),
 
-                  Spacer(),
+                  const Spacer(),
 
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       /// Pricing
-                      Flexible(child: TProductPriceText(price: '256.0-349.0')),
+                      const Flexible(child: TProductPriceText(price: '256.0-349.0')),
 
                       /// Add to Cart
                       Container(

@@ -5,7 +5,6 @@ import 'package:iconsax/iconsax.dart';
 import 'package:tstore/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:tstore/common/widgets/list_tiles/settings_menu_tile.dart';
 import 'package:tstore/common/widgets/text/section_heading.dart';
-import 'package:tstore/features/personalization/view/address/add_new_address.dart';
 import 'package:tstore/features/personalization/view/address/address.dart';
 import 'package:tstore/features/shop/view/cart/cart.dart';
 import 'package:tstore/features/shop/view/order/order.dart';

@@ -23,7 +23,7 @@ class TProductCardVertical extends StatelessWidget {
     final dark = THelperFunctions.isDarkMode(context);
     return GestureDetector(
       onTap: (){
-        Get.to(()=> ProductDetail());
+        Get.to(()=> const ProductDetail());
       },
       child: Container(
         width: 180,
@@ -42,8 +42,8 @@ class TProductCardVertical extends StatelessWidget {
               child: Stack(
                 children: [
                   ///Thumbnail Image
-                  Center(
-                    child: const TRoundedImage(
+                  const Center(
+                    child: TRoundedImage(
                       imageUrl: TImages.productImage1,
                       applyImageRadius: true,
                     ),
@@ -80,7 +80,7 @@ class TProductCardVertical extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: TSizes.spaceBtwItems/2,
             ),
 
@@ -88,32 +88,32 @@ class TProductCardVertical extends StatelessWidget {
 
             ///Detail Section
 
-            Column(
+            const Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const TProductTileText(
+                TProductTileText(
                   title: 'Grren Nike Air Shoes',
                   smallSize: true,
                 ),
 
-                const SizedBox(height: TSizes.spaceBtwItems/2,),
+                SizedBox(height: TSizes.spaceBtwItems/2,),
 
-                const TBrandTitleText(title: 'Nike'),
+                TBrandTitleText(title: 'Nike'),
 
 
 
               ],
             ),
-            Spacer(),
+            const Spacer(),
 
             /// Price Row
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 /// Price
-                Padding(
-                  padding: const EdgeInsets.only(left:TSizes.sm),
-                  child: const TProductPriceText(
+                const Padding(
+                  padding: EdgeInsets.only(left:TSizes.sm),
+                  child: TProductPriceText(
                     price: '35.5',
                   ),
                 ),

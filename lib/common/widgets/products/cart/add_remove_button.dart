@@ -25,9 +25,9 @@ class TProductQuantityWithAddAndRemove extends StatelessWidget {
           color: THelperFunctions.isDarkMode(context)? TColors.white:TColors.black,
           bgColor : THelperFunctions.isDarkMode(context)? TColors.darkerGrey:TColors.light,
         ),
-        SizedBox(width: TSizes.spaceBtwItems),
+        const SizedBox(width: TSizes.spaceBtwItems),
         Text('2',style: Theme.of(context).textTheme.titleSmall,),
-        SizedBox(width: TSizes.spaceBtwItems),
+        const SizedBox(width: TSizes.spaceBtwItems),
         TCircularIcon(
           dark: THelperFunctions.isDarkMode(context),
           icon: Iconsax.add,

@@ -32,29 +32,29 @@ class CheckoutPage extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(TSizes.defaultSpace),
+          padding: const EdgeInsets.all(TSizes.defaultSpace),
           child: Column(
             children: [
               /// Items in Cart
-              TCartItems(
+              const TCartItems(
                 showAddRemoveButton: false,
               ),
-              SizedBox(
+              const SizedBox(
                 height: TSizes.spaceBtwSections,
               ),
 
               /// Coupon TextField
-              TCouponCode(),
-              SizedBox(
+              const TCouponCode(),
+              const SizedBox(
                 height: TSizes.spaceBtwSections,
               ),
 
               /// Billing Section
               TRoundedContainer(
                 showBorder: true,
-                padding: EdgeInsets.all(TSizes.md),
+                padding: const EdgeInsets.all(TSizes.md),
                 bgColor: dark ? TColors.black : TColors.white,
-                child: Column(
+                child: const Column(
                   children: [
                     /// Pricing
                     BillingAmountSection(),

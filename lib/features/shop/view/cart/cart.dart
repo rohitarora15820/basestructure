@@ -1,21 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:iconsax/iconsax.dart';
-import 'package:tstore/common/widgets/icons/t_circular_icon.dart';
-import 'package:tstore/common/widgets/images/t_roundec_images.dart';
-import 'package:tstore/common/widgets/text/t_brand_title_text_with_verfied_icon.dart';
-import 'package:tstore/common/widgets/text/t_product_price_text.dart';
 import 'package:tstore/features/shop/view/cart/widgets/cart_item.dart';
 import 'package:tstore/features/shop/view/checkout/checkout.dart';
-import 'package:tstore/utils/constants/colors.dart';
-import 'package:tstore/utils/constants/image_strings.dart';
 import 'package:tstore/utils/constants/sizes.dart';
-import 'package:tstore/utils/helpers/helper_functions.dart';
 
 import '../../../../common/widgets/custom_appbar/appbar.dart';
-import '../../../../common/widgets/products/cart/add_remove_button.dart';
-import '../../../../common/widgets/products/cart/cart_item.dart';
-import '../../../../common/widgets/text/t_product_tile_text.dart';
 
 class CartPage extends StatelessWidget {
   const CartPage({super.key});

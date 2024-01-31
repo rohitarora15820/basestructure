@@ -21,17 +21,17 @@ class BillingAddressSection extends StatelessWidget {
           'Coding with Rohit',
           style: Theme.of(context).textTheme.bodyLarge,
         ),
-        SizedBox(
+        const SizedBox(
           height: TSizes.spaceBtwItems / 2,
         ),
         Row(
           children: [
-            Icon(
+            const Icon(
               Icons.phone,
               color: Colors.grey,
               size: 16,
             ),
-            SizedBox(
+            const SizedBox(
               width: TSizes.spaceBtwItems,
             ),
             Text(
@@ -40,17 +40,17 @@ class BillingAddressSection extends StatelessWidget {
             )
           ],
         ),
-        SizedBox(
+        const SizedBox(
           height: TSizes.spaceBtwItems / 2,
         ),
         Row(
           children: [
-            Icon(
+            const Icon(
               Icons.location_history,
               color: Colors.grey,
               size: 16,
             ),
-            SizedBox(
+            const SizedBox(
               width: TSizes.spaceBtwItems,
             ),
             Text(
@@ -60,7 +60,7 @@ class BillingAddressSection extends StatelessWidget {
             )
           ],
         ),
-        SizedBox(
+        const SizedBox(
           height: TSizes.spaceBtwItems / 2,
         ),
       ],

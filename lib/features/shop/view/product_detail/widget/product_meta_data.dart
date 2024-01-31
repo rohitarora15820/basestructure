@@ -38,7 +38,7 @@ class ProductMetaData extends StatelessWidget {
             ),
 
             ///Price Tag
-            SizedBox(
+            const SizedBox(
               width: TSizes.spaceBtwItems,
             ),
 
@@ -49,10 +49,10 @@ class ProductMetaData extends StatelessWidget {
                   .titleSmall!
                   .apply(decoration: TextDecoration.lineThrough),
             ),
-            SizedBox(
+            const SizedBox(
               width: TSizes.spaceBtwItems,
             ),
-            TProductPriceText(
+            const TProductPriceText(
               price: '175',
               isLarge: true,
             )
@@ -63,7 +63,7 @@ class ProductMetaData extends StatelessWidget {
         ),
 
         /// Title
-        TProductTileText(title: 'Green Nike Sports Shirt'),
+        const TProductTileText(title: 'Green Nike Sports Shirt'),
         const SizedBox(
           height: TSizes.spaceBtwItems / 1.5,
         ),
@@ -71,8 +71,8 @@ class ProductMetaData extends StatelessWidget {
         Row(
 
           children: [
-            TProductTileText(title: 'Status'),
-            SizedBox(
+            const TProductTileText(title: 'Status'),
+            const SizedBox(
               width: TSizes.spaceBtwItems,
             ),
             Text('In-Stock',style: Theme.of(context).textTheme.titleMedium,),
@@ -90,7 +90,7 @@ class ProductMetaData extends StatelessWidget {
             height: 32,
               overlayColor: dark? TColors.white:TColors.black,
             ),
-            TBrandTitleWithVerifyIcon(title: 'Nike',brandTextSizes: TextSizes.medium,),
+            const TBrandTitleWithVerifyIcon(title: 'Nike',brandTextSizes: TextSizes.medium,),
 
           ],
         )

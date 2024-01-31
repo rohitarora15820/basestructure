@@ -54,13 +54,13 @@ class TOrderListScreen extends StatelessWidget {
                 /// Icon
                 IconButton(
                     onPressed: () {},
-                    icon: Icon(
+                    icon: const Icon(
                       Iconsax.arrow_right_34,
                       size: TSizes.iconSm,
                     ))
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: TSizes.spaceBtwItems,
             ),
 
